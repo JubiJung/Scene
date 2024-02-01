@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap");
+
+.header {
+  align-items: center;
+  height: 100%;
+  width: 720px;
+}
+
+.logo {
+  font-size: 50px;
+  margin: 10px 0;
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-style: italic;
+}

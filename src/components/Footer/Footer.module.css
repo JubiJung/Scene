@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap");
+
+.writeBtnArea {
+  width: 500px;
+  display: flex;
+  justify-content: right;
+  margin: 20px auto;
+}
+
+.writeBtn {
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 5px 10px;
+  background: white;
+  border: 1px solid rgb(156, 156, 156);
+  border-radius: 50px;
+}
+
+.writeBtn:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
