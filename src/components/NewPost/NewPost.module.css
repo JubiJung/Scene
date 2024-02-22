@@ -4,7 +4,9 @@
   display: flex;
   flex-direction: column;
   height: 600px;
+  width: 720px;
 }
+
 .dropDownArea {
   width: 80px;
   margin: 0 0 0 auto;
@@ -38,7 +40,7 @@
 }
 
 .mainContent {
-  height: 100%;
+  height: 400px;
 }
 
 .submitButtonArea {
