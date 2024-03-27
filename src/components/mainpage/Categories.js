@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import styles from "./Categories.module.css";
 
 const categoriesData = [
@@ -47,7 +48,7 @@ const Categories = ({
   return (
     <div className={styles.category}>
       {categoriesData.map((c, i) => (
-        <div
+        <motion.div
           key={c.value}
           className={
             currIndex === i ? styles.currCategory : styles.categorySelector
@@ -57,8 +58,23 @@ const Categories = ({
             setCurrIndex(i);
           }}
         >
-          <div>{c.name}</div>
-        </div>
+          <motion.div style={{ zIndex: 1 }} className={styles.text}>
+            {c.name}
+          </motion.div>
+          {currIndex === i && (
+            <motion.div
+              animate={{
+                x: [-5, 5, 0],
+                opacity: [0, 0.5, 1],
+                transition: {
+                  type: "spring",
+                  duration: 0.5,
+                },
+              }}
+              className={styles.highlight}
+            />
+          )}
+        </motion.div>
       ))}
     </div>
   );

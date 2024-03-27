@@ -4,7 +4,6 @@ import Categories from "./Categories";
 import PostingList from "./PostingList";
 import Footer from "../Footer/Footer";
 import SearchBar from "../header/SearchBar";
-import styles from "./MainPage.module.css";
 
 const listFilterFunc = (items, query) => {
   if (items === undefined || items === null) return [];
@@ -38,7 +37,7 @@ const MainPage = () => {
   const book = groupingPostingList(posts, "book");
 
   return (
-    <main className={styles.main}>
+    <main>
       <SearchBar
         searchInputVal={searchInputVal}
         setSearchInputVal={setSearchInputVal}

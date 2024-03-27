@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { postActions } from "../../store/index";
 import { v4 as uuid } from "uuid";
+import { motion } from "framer-motion";
 import QuillEditor from "./QuillEditor";
 import MovieTable from "./table/MovieTable";
 import DramaTable from "./table/DramaTable";
@@ -31,7 +32,6 @@ const NewPost = () => {
   const dispatch = useDispatch();
   const movePage = useNavigate();
   const [showPage, setShowPage] = useState("movie");
-  const [inputBlur, setInputBlur] = useState("false");
   const [inputValue, setInputValue] = useState(initialInputData);
   const categoryRef = useRef(null);
 
@@ -96,9 +96,6 @@ const NewPost = () => {
         </div>
         <div className={styles.title}>
           <input
-            // onBlur={() => {
-            //   console.log("blur");
-            // }}
             className={styles.titleInput}
             name="title"
             value={inputValue.title}
@@ -139,7 +136,13 @@ const NewPost = () => {
           <QuillEditor value={inputValue} setValue={handleRatingsAndEditor} />
         </div>
         <div className={styles.submitButtonArea}>
-          <button className={styles.submitBtn}>확인</button>
+          <motion.button
+            whileHover={{ scale: [1, 1.05] }}
+            transition={{ duration: 0.15 }}
+            className={styles.submitBtn}
+          >
+            확인
+          </motion.button>
         </div>
       </form>
     </section>

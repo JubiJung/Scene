@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import styles from "./PostListTable.module.css";
 
 const PostListTable = ({ props }) => {
@@ -16,9 +17,15 @@ const PostListTable = ({ props }) => {
     }
   };
   return (
-    <div className={styles.postList} onClick={goDetailedPage}>
+    <motion.div
+      key={new Date()}
+      animate={{ opacity: [0.5, 1] }}
+      transition={{ duration: 0.3 }}
+      className={styles.postList}
+      onClick={goDetailedPage}
+    >
       <div>{props.listTitle}</div>
-    </div>
+    </motion.div>
   );
 };
 export default PostListTable;

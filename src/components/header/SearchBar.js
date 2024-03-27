@@ -1,3 +1,4 @@
+import { motion, spring } from "framer-motion";
 import styles from "./SearchBar.module.css";
 
 const SearchBar = ({ searchInputVal, setSearchInputVal }) => {
@@ -9,7 +10,12 @@ const SearchBar = ({ searchInputVal, setSearchInputVal }) => {
   };
   return (
     <div className={styles.searchBar}>
-      <form className={styles.searchForm} onSubmit={submitHandler}>
+      <motion.form
+        whileHover={{ scale: [1, 1.05, 1] }}
+        transition={{ duration: 0.3 }}
+        className={styles.searchForm}
+        onSubmit={submitHandler}
+      >
         <img
           className={styles.searchIcon}
           alt="search_icon"
@@ -22,7 +28,7 @@ const SearchBar = ({ searchInputVal, setSearchInputVal }) => {
           value={searchInputVal}
           placeholder="제목을 입력하세요."
         />
-      </form>
+      </motion.form>
     </div>
   );
 };
