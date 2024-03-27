@@ -1,6 +1,10 @@
 import React from "react";
 import { useState } from "react";
+<<<<<<< HEAD
 import { motion } from "framer-motion";
+=======
+import { motion, AnimatePresence } from "framer-motion";
+>>>>>>> 303721ef97d06ba205cae8b860796454b5d0a71d
 import styles from "./Categories.module.css";
 
 const categoriesData = [
