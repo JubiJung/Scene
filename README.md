@@ -1,5 +1,6 @@
 # Scene (2023/11 ~ 2023/01/26)
-![image](https://github.com/JubiJung/Scene/assets/124552101/403f9bc6-11e7-4937-9970-abfc83805c88)
+<img style="display: inlineBlock" width="480px" src="https://github.com/JubiJung/Scene/assets/124552101/6f433d08-a02a-4ebb-bee0-d6ad80a516f6"/>
+<img style="display: inlineBlock" width="450px" src="https://github.com/JubiJung/Scene/assets/124552101/403f9bc6-11e7-4937-9970-abfc83805c88"/>
 
 **배포** <https://scene-c942c.web.app/>
 ***
